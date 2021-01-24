@@ -5,6 +5,4 @@ const app = new FrameworkApp({
     updateQuery: 1
 });
 
-console.log("test123");
-
 app.add("app.js", "app.hbs");

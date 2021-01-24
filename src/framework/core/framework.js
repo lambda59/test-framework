@@ -42,7 +42,6 @@ class FrameworkApp {
         const load = (templateSource) => {
             const template = compile(templateSource);
             import(`../../controllers/${controller}`).then(mc => {
-                console.log(mc.data);
                 this.borrowedDOM.RenderToDOM(template(mc.data));
             });
         };

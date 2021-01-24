@@ -1,5 +1,6 @@
 const data = {
-    name: "Aaaaaaaaaaa"
+    name: "DDD",
+    testArr: [1, 2, 3],
 };
 
 export { data };
