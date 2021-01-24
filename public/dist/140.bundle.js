@@ -1,0 +1,1 @@
+(self.webpackChunkframework=self.webpackChunkframework||[]).push([[140],{140:(e,a,k)=>{"use strict";k.r(a),k.d(a,{data:()=>r});let r={name:"Denis"}}}]);
