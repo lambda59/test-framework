@@ -1,5 +1,5 @@
-let data = {
-    name: "Denis"
+const data = {
+    name: "Aaaaaaaaaaa"
 };
 
 export { data };

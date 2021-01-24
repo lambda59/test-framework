@@ -35,24 +35,23 @@ class FrameworkApp {
         });
     }
 
-    add(cName, tName) {
-        var controller = cName;
-        this.template = tName;
-        var currentThis = this;
+    add(controllerName, templateName) {
+        const controller = controllerName;
+        this.templateName = templateName;
 
-        const load = (template) => {
-            var reController = controller;
-            var template = compile(template);
-            import(`../../controllers/${reController}`).then(mc => {
+        const load = (templateSource) => {
+            const template = compile(templateSource);
+            import(`../../controllers/${controller}`).then(mc => {
+                console.log(mc.data);
                 this.borrowedDOM.RenderToDOM(template(mc.data));
             });
-        }
+        };
 
         var xhr = new XMLHttpRequest();
         xhr.onload = function() {
             load(this.responseText);
         }
-        xhr.open("GET", "../src/templates/" + this.template);
+        xhr.open("GET", "../src/templates/" + this.templateName);
         xhr.send();
     }
 
